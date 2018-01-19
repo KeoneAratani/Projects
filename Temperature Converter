@@ -1,0 +1,19 @@
+function temperatureConverter(temp, type) {
+  let temper = 0;
+  switch (type) {
+    case "F":
+      temper = Math.round((temp - 32) * (5 / 9));
+      return temper;
+      break;
+    case "C":
+      temper = Math.round((temp * (9 / 5) + 32));
+      return temper;
+      break;
+    default:
+      return "Illegal temperature type."
+  }
+}
+
+console.log(temperatureConverter(100, "F"));
+console.log(temperatureConverter(0, "C"));
+console.log(temperatureConverter(0, "X"));
