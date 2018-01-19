@@ -1,0 +1,15 @@
+function projectEulerTwo(num) {
+  let sum = 0;
+  let prevTerm = 1;
+  let currTerm = 2;
+  while (currTerm <= num) {
+    if (currTerm % 2 == 0) {
+      sum += currTerm;
+    }
+    currTerm += prevTerm;
+    prevTerm = currTerm - prevTerm;
+  }
+  return sum;
+}
+
+console.log(projectEulerTwo(34));
